@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ANN Possiblity for Diabetes Mellitus Prediction</title>
+</head>
+<body>
+    <h2>Enter 7 Features for Diabetes Mellitus Prediction</h2><br>
+    <h1><p>Kindly provide details of your report as per the requirement format mentioned as example. 1 or 0 indicates 1 - present 0- absent state</p></h1>
+    <form action="/predict" method="post">
+        <label>Age (example - 25) :</label>
+        <input type="text" name="feature1" required><br>
+
+        <label>Blood Glucose level (example - 80) :</label>
+        <input type="text" name="feature2" required><br>
+
+        <label>HbA1C Level (example - 4.8) :</label>
+        <input type="text" name="feature3" required><br>
+
+        <label>Body Mass Index (BMI) (example - 25.60) :</label>
+        <input type="text" name="feature4" required><br>
+
+        <label>Hypertension (example - 1 or 0) :</label>
+        <input type="text" name="feature5" required><br>
+
+        <label>Heart Disease (example - 1 or 0) :</label>
+        <input type="text" name="feature6" required><br>
+
+        <label>Gener (example - Male - 1 or Female - 0) :</label>
+        <input type="text" name="feature7" required><br>
+
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

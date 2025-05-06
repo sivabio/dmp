@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h2>Prediction Result</h2>
+
+        {% if prediction_class == 1 %}
+        <h3 style="color: red;">Result: The Diabets Mellitus Condition is <strong>PRESENT</strong>.</h3>
+    {% elif prediction_class == 0 %}
+        <h3 style="color: green;">Result: You are not Diabetic. Diabets Mellitus Condition is <strong>NOT PRESENT</strong>.</h3>
+    {% else %}
+        <h3 style="color: blue;">Result: <strong>Not Predicted</strong>. Please check input data or model.</h3>
+    {% endif %}
+    <br>
+    <p>Predicted Probability: {{ prediction_probability }}</p>
+    <br>
+    <a href="/">Make another prediction</a>
+</body>
+</html>
