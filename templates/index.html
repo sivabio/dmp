@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ANN Possiblity for Diabetes Mellitus Prediction</title>
+    <title>DL Possibility for Diabetes Mellitus Prediction</title>
+    <style>
+        body {
+            background-color: wheat;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin: auto;
+            width: 50%;
+            font-size: 18px;
+        }
+        label {
+            display: inline-block;
+            width: 250px;
+            margin: 8px 0;
+        }
+        input[type="text"] {
+            width: 200px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>Enter 7 Features for Diabetes Mellitus Prediction</h2><br>
-    <h1><p>Kindly provide details of your report as per the requirement format mentioned as example. 1 or 0 indicates 1 - present 0- absent state</p></h1>
+    <h1>DL Possibility for Diabetes Mellitus Prediction</h1>
+    <p style="text-align: center;">Please enter details as per example values. Use 1 for present, 0 for absent conditions.</p>
+    
     <form action="/predict" method="post">
-        <label>Age (example - 25) :</label>
-        <input type="text" name="feature1" required><br>
+        <label for="feature1">Age (e.g., 25):</label>
+        <input type="number" name="feature1" id="feature1" required><br>
 
-        <label>Blood Glucose level (example - 80) :</label>
-        <input type="text" name="feature2" required><br>
+        <label for="feature2">Blood Glucose Level (e.g., 80):</label>
+        <input type="number" step="any" name="feature2" id="feature2" required><br>
 
-        <label>HbA1C Level (example - 4.8) :</label>
-        <input type="text" name="feature3" required><br>
+        <label for="feature3">HbA1C Level (e.g., 4.8):</label>
+        <input type="number" step="any" name="feature3" id="feature3" required><br>
 
-        <label>Body Mass Index (BMI) (example - 25.60) :</label>
-        <input type="text" name="feature4" required><br>
+        <label for="feature4">BMI (e.g., 25.60):</label>
+        <input type="number" step="any" name="feature4" id="feature4" required><br>
 
-        <label>Hypertension (example - 1 or 0) :</label>
-        <input type="text" name="feature5" required><br>
+        <label for="feature5">Hypertension (0 or 1):</label>
+        <input type="number" name="feature5" id="feature5" required><br>
 
-        <label>Heart Disease (example - 1 or 0) :</label>
-        <input type="text" name="feature6" required><br>
+        <label for="feature6">Heart Disease (0 or 1):</label>
+        <input type="number" name="feature6" id="feature6" required><br>
 
-        <label>Gener (example - Male - 1 or Female - 0) :</label>
-        <input type="text" name="feature7" required><br>
+        <label for="feature7">Gender (Male=1, Female=0):</label>
+        <input type="number" name="feature7" id="feature7" required><br><br>
 
-        <br>
-        <input type="submit" value="Predict">
+        <div class="center">
+            <input type="submit" value="Predict">
+        </div>
     </form>
 </body>
 </html>
