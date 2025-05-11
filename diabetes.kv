@@ -1,0 +1,52 @@
+<DiabetesForm>:
+    orientation: "vertical"
+    padding: 20
+    spacing: 10
+
+    TextInput:
+        id: age
+        hint_text: "Age"
+        input_filter: "float"
+
+    TextInput:
+        id: glucose
+        hint_text: "Blood Glucose Level"
+        input_filter: "float"
+
+    TextInput:
+        id: hba1c
+        hint_text: "HbA1C Level"
+        input_filter: "float"
+
+    TextInput:
+        id: bmi
+        hint_text: "BMI"
+        input_filter: "float"
+
+    TextInput:
+        id: hypertension
+        hint_text: "Hypertension (1 or 0)"
+        input_filter: "int"
+
+    TextInput:
+        id: heart
+        hint_text: "Heart Disease (1 or 0)"
+        input_filter: "int"
+
+    TextInput:
+        id: gender
+        hint_text: "Gender (1 = Male, 0 = Female)"
+        input_filter: "int"
+
+    Button:
+        text: "Predict"
+        size_hint_y: None
+        height: 50
+        on_release: root.predict()
+
+    Label:
+        id: result
+        text: ""
+        halign: "center"
+        valign: "middle"
+        font_size: 18
